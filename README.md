@@ -1,17 +1,44 @@
-# my_maps_app
+# Flutter Maps App
 
-A new Flutter project.
+A Flutter application demonstrating Google Maps integration with location tracking, route drawing using Google Directions API, and distance calculation.
+
+---
+
+## Features
+
+- Display Google Map centered on user's current location.
+- Search and input start and destination addresses.
+- Draw route polyline between two places using Google Directions API.
+- Calculate and display the distance of the route.
+- Show markers for start and destination locations.
+- Zoom in/out controls.
+
+---
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter SDK (>=3.8.1)
+- A Google Cloud project with billing enabled.
+- Google Maps API Key with the following APIs enabled:
+  - Maps SDK for Android
+  - Maps SDK for iOS
+  - Directions API
+  - Geocoding API
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# google-maps" 
+### Setup
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/flutter_maps_app.git
+   cd flutter_maps_app
+2. **Install dependencies**   flutter pub get
+
+3. **Run the app**
+
+   ```bash
+   flutter run
