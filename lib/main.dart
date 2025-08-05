@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Maps',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -40,7 +41,7 @@ class _MapViewState extends State<MapView> {
   final destinationAddressController = TextEditingController();
 
   final startAddressFocusNode = FocusNode();
-  final desrinationAddressFocusNode = FocusNode();
+  final destinationAddressFocusNode = FocusNode();
 
   String _startAddress = '';
   String _destinationAddress = '';
@@ -451,7 +452,7 @@ if (polylineCoordinates.length > 1) {
                               hint: 'Choose destination',
                               prefixIcon: Icon(Icons.looks_two),
                               controller: destinationAddressController,
-                              focusNode: desrinationAddressFocusNode,
+                              focusNode: destinationAddressFocusNode,
                               width: width,
                               locationCallback: (String value) {
                                 setState(() {
@@ -475,7 +476,7 @@ if (polylineCoordinates.length > 1) {
                                     _destinationAddress != '')
                                 ? () async {
                                     startAddressFocusNode.unfocus();
-                                    desrinationAddressFocusNode.unfocus();
+                                    destinationAddressFocusNode.unfocus();
                                     setState(() {
                                       markers.clear();
                                       polylines.clear();
